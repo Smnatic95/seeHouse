@@ -1,0 +1,26 @@
+.articlePage {
+  width: 100vw;
+}
+
+.articlePage .title {
+  font-size: 38rpx;
+  text-align: left;
+  font-weight: 600;
+  padding: 20rpx 10rpx;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  line-height: 50rpx
+}
+
+.createtime {
+  text-align: right;
+  padding-right: 60rpx;
+  font-size: 26rpx;
+  color: #444
+}
+
+.contents {
+  padding: 0 10rpx;
+}

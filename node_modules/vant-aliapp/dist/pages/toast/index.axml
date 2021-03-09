@@ -1,0 +1,33 @@
+<view class='page-container-classname' ref='saveChildRef0'>
+  <demo-block title='文字提示' padding=" " ref='saveChildRef1'>
+    <van-button type='primary' class='demo-margin-right' onClick='showToast' ref='saveChildRef2'>
+      文字提示
+    </van-button>
+    <van-button type='primary' onClick='showLongToast' ref='saveChildRef3'>
+      长文字提示
+    </van-button>
+  </demo-block>
+  <demo-block title='加载提示' padding=" " ref='saveChildRef4'>
+    <van-button type='primary' class='demo-margin-right' onClick='showLoadingToast' ref='saveChildRef5'>
+      加载提示
+    </van-button>
+    <van-button type='primary' onClick='showCustomLoadingToast' ref='saveChildRef6'>
+      自定义加载图标
+    </van-button>
+  </demo-block>
+  <demo-block title='成功/失败提示' padding=" " ref='saveChildRef7'>
+    <van-button type='info' class='demo-margin-right' onClick='showSuccessToast' ref='saveChildRef8'>
+      成功提示
+    </van-button>
+    <van-button type='danger' onClick='showFailToast' ref='saveChildRef9'>
+      失败提示
+    </van-button>
+  </demo-block>
+  <demo-block title='动态更新提示' padding=" " ref='saveChildRef10'>
+    <van-button type='primary' onClick='showCustomizedToast' ref='saveChildRef11'>
+      动态更新提示
+    </van-button>
+  </demo-block>
+  <van-toast id='van-toast' ref='saveChildRef12'>
+  </van-toast>
+</view>

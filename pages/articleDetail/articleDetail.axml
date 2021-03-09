@@ -1,0 +1,13 @@
+<view>
+  <view class="articlePage">
+    <view class="title">
+      {{desc}}
+    </view>
+    <view class="createtime">
+      {{createtime}}
+    </view>
+    <view class="contents">
+      <rich-text nodes="{{nodes}}"></rich-text>
+    </view>
+  </view>
+</view>

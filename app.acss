@@ -1,0 +1,120 @@
+page {
+  background: #f7f7f7;
+}
+
+:root {
+  --MainBlue: #52A4FF;
+}
+
+.mask {
+  background-color: black;
+  opacity: .8;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0
+}
+
+@font-face {
+  font-family: 'iconfont';
+  /* project id 2341210 */
+  src: url('//at.alicdn.com/t/font_2341210_3vwssbq9npd.eot');
+  src: url('//at.alicdn.com/t/font_2341210_3vwssbq9npd.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_2341210_3vwssbq9npd.woff2') format('woff2'), url('//at.alicdn.com/t/font_2341210_3vwssbq9npd.woff') format('woff'), url('//at.alicdn.com/t/font_2341210_3vwssbq9npd.ttf') format('truetype'), url('//at.alicdn.com/t/font_2341210_3vwssbq9npd.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont"!important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.labaFont::before {
+  content: '\e606';
+}
+
+.yuyueFont::before {
+  content: '\e64e';
+}
+
+.phoneFont::before {
+  content: '\e62e';
+}
+
+.xingFont::before {
+  content: '\e661';
+}
+
+.moreFont::before {
+  content: '\e67f';
+}
+
+.louPanFont::before {
+  content: '\e602';
+}
+
+.noMessageFont::before {
+  content: '\e6db';
+}
+
+.locationFont::before {
+  content: '\e68f';
+}
+
+.arrowRightFont::before {
+  content: '\e600';
+}
+
+.moreFont1::before {
+  content: '\e638';
+}
+
+.arrowDownFont::before {
+  content: '\e601';
+}
+
+.downFont::before {
+  content: '\e696';
+}
+
+.searchFont::before {
+  content: '\e604';
+}
+
+.shareFont::before {
+  content: '\e699';
+}
+
+.subscribe::before {
+  content: '\e671';
+}
+
+.daoHang::before {
+  content: '\e605';
+}
+
+.weChatFont::before {
+  content: '\e66b'
+}
+
+.onlineAskFont::before {
+  content: '\e64f'
+}
+
+.collectFont::before {
+  content: '\e607'
+}
+
+.searchFont1::before {
+  content: '\e97d'
+}
+
+.trueFont::before {
+  content: '\e709'
+}
+
+.rmbFont::before {
+  content: '\e70a'
+}

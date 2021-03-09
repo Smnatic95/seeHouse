@@ -1,0 +1,94 @@
+<view class='page-container-classname' ref='saveChildRef0'>
+  <demo-block title='基础用法' ref='saveChildRef1'>
+    <van-tabs active='{{ 1 }}' onChange='onChange' ref='saveChildRef2'>
+      <van-tab a:for='{{ tabs4 }}' a:key='{{*this}}' title="{{ '标签 ' + item }}" ref-numbers='{{ tabs4 }}' ref='saveChildRef3'>
+        <view class='content'>
+          {{ '内容' + item }}
+        </view>
+      </van-tab>
+    </van-tabs>
+  </demo-block>
+  <demo-block title='通过名称匹配' ref='saveChildRef4'>
+    <van-tabs active='b' ref='saveChildRef5'>
+      <van-tab a:for='{{ tabsWithName }}' a:key='{{*this}}' name='{{ item.name }}' title="{{ '标签 ' + item.index }}" ref-numbers='{{ tabsWithName }}' ref='saveChildRef6'>
+        <view class='content'>
+          {{ '内容' + item.index}}
+        </view>
+      </van-tab>
+    </van-tabs>
+  </demo-block>
+  <demo-block title='横向滚动' ref='saveChildRef7'>
+    <van-tabs ref='saveChildRef8'>
+      <van-tab a:for='{{ tabs6 }}' a:key='{{*this}}' title="{{ '标签 ' + item }}" ref-numbers='{{ tabs6 }}' ref='saveChildRef9'>
+        <view class='content'>
+          {{ '内容' + item }}
+        </view>
+      </van-tab>
+    </van-tabs>
+  </demo-block>
+  <demo-block title='禁用标签' ref='saveChildRef10'>
+    <van-tabs onDisabled='onClickDisabled' ref='saveChildRef11'>
+      <van-tab a:for='{{ tabs3 }}' a:key='{{*this}}' disabled='{{ index === 1 }}' title="{{ '标签 ' + item }}" ref-numbers='{{ tabs3 }}' ref='saveChildRef12'>
+        <view class='content'>
+          {{ '内容' + item }}
+        </view>
+      </van-tab>
+    </van-tabs>
+  </demo-block>
+  <demo-block title='样式风格' ref='saveChildRef13'>
+    <van-tabs type='card' tab-class='special-tab' ref='saveChildRef14'>
+      <van-tab a:for='{{ tabs3 }}' a:key='{{*this}}' title="{{ '标签 ' + item }}" ref-numbers='{{ tabs3 }}' ref='saveChildRef15'>
+        <view class='content-2'>
+          {{ '内容' + item }}
+        </view>
+      </van-tab>
+    </van-tabs>
+  </demo-block>
+  <demo-block title='点击事件' ref='saveChildRef16'>
+    <van-tabs onClick='onClick' ref='saveChildRef17'>
+      <van-tab a:for='{{ tabs2 }}' a:key='{{*this}}' title="{{ '标签 ' + item }}" ref-numbers='{{ tabs2 }}' ref='saveChildRef18'>
+        <view class='content'>
+          {{ '内容' + item }}
+        </view>
+      </van-tab>
+    </van-tabs>
+  </demo-block>
+  <demo-block title='粘性布局' ref='saveChildRef19'>
+    <van-tabs sticky=" " ref='saveChildRef20'>
+      <van-tab a:for='{{ tabs4 }}' a:key='{{*this}}' title="{{ '标签 ' + item }}" ref-numbers='{{ tabs4 }}' ref='saveChildRef21'>
+        <view class='content'>
+          {{ '内容' + item }}
+        </view>
+      </van-tab>
+    </van-tabs>
+  </demo-block>
+  <demo-block title='切换动画' ref='saveChildRef22'>
+    <van-tabs animated=" " ref='saveChildRef23'>
+      <van-tab a:for='{{ tabs4 }}' a:key='{{*this}}' title="{{ '标签 ' + item }}" ref-numbers='{{ tabs4 }}' ref='saveChildRef24'>
+        <view class='content'>
+          {{ '内容' + item }}
+        </view>
+      </van-tab>
+    </van-tabs>
+  </demo-block>
+  <demo-block title='滑动切换' ref='saveChildRef25'>
+    <van-tabs swipeable=" " ref='saveChildRef26'>
+      <van-tab a:for='{{ tabs4 }}' a:key='{{*this}}' title="{{ '标签 ' + item }}" ref-numbers='{{ tabs4 }}' ref='saveChildRef27'>
+        <view class='content'>
+          {{ '内容' + item }}
+        </view>
+      </van-tab>
+    </van-tabs>
+  </demo-block>
+  <demo-block title='自定义标题' ref='saveChildRef28'>
+    <van-tabs active='{{ 1 }}' tab-class='special-tab' tab-active-class='special-tab-active' onChange='onChange' ref='saveChildRef29'>
+      <van-icon slot='nav-right' name='search' custom-class='right-nav' onClick='onClickNavRight' ref='saveChildRef30'>
+      </van-icon>
+      <van-tab a:for='{{ tabs4 }}' a:key='{{*this}}' title="{{ '标签 ' + item }}" dot='{{ index === 1 }}' info='{{ index === 2 ? 99 : null }}' ref-numbers='{{ tabs4 }}' ref='saveChildRef31'>
+        <view class='content'>
+          {{ '内容' + item }}
+        </view>
+      </van-tab>
+    </van-tabs>
+  </demo-block>
+</view>

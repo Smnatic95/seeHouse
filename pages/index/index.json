@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "lpxmlist": "../../component/myComponent/LpXmList/LpXmList",
+    "getuserinfo": "../../component/myComponent/getUserInfo/getUserInfo"
+  }
+}

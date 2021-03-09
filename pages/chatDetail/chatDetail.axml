@@ -1,0 +1,43 @@
+<view class="chatDetail">
+  <view class="chatList">
+    <view class="chatItem self">
+      <view class="avator">
+        <image mode="scaleToFill" src="https://www.hs-estate.com/uploads/2020/06/image-2.png"/>
+      </view>
+      <view class="pull_right">
+        <view class="p_info">
+          <view class="name">我</view>
+        </view>
+        <view class="content">
+        你好
+        </view>
+      </view>
+    </view>
+    <view class="chatItem">
+      <view class="avator">
+        <image mode="scaleToFill" src="https://www.hs-estate.com/uploads/2020/06/image-2.png"/>
+      </view>
+      <view class="pull_right">
+        <view class="p_info">
+          <view class="name">嘉伟</view>
+          <view class="position">[镜像西湖]</view>
+        </view>
+        <view class="content">你好</view>
+      </view>
+    </view>
+    <view class="chatItem">
+      <view class="avator">
+        <image mode="scaleToFill" src="https://www.hs-estate.com/uploads/2020/06/image-2.png"/>
+      </view>
+      <view class="pull_right">
+        <view class="p_info">
+          <view class="name">嘉伟</view>
+          <view class="position">[镜像西湖]</view>
+        </view>
+        <view class="content">
+          有什么可以帮到您
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

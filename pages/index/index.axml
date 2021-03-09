@@ -1,0 +1,63 @@
+<view class="indexPage" a:if="{{init}}">
+  <!--顶部-->
+  <view class="myNav">
+    <view class="lbs">
+      <text class="curLocation">
+        <navigator open-type="navigate" url="../chooseCity/chooseCity?curCity={{city_name}}" hover-class="navigator-hover">
+          <text class="iconfont locationFont"></text>
+          <text class="cityName">{{city_name}}</text>
+        </navigator>
+      </text>
+    </view>
+    <view class="lPSearch_box" data-ipt="true" onTap="toMore">
+      <text class="iconfont searchFont1"></text>
+      <input disabled="{{true}}" class="ipt" placeholder="请输入楼盘名称进行搜索" placeholder-class="placeholder" />
+    </view>
+  </view>
+  <view class="container">
+    <!-- 项目轮播 -->
+    <swiper indicator-color="#ccc" indicator-active-color="#C10005" a:if="{{swiperList&&swiperList.length}}" class="xmSwiper" indicator-dots="{{true}}" circular="{{true}}" duration="{{500}}" current="{{swiperIndex}}" autoplay="{{true}}" snap-to-edge="{{true}}">
+      <swiper-item a:for="{{swiperList}}">
+        <navigator open-type="navigate" url="../louPanDetail/louPanDetail?index={{item.pro_id}}">
+          <image src="{{item.img_path}}"/>
+        </navigator>
+      </swiper-item>
+    </swiper>
+    <view class="mainCnt">
+      <!-- 楼市动态 -->
+      <view class="louShiNews" a:if="{{notice&&notice.length}}">
+        <view class="section_title_bar">
+          <view class="iconfont labaFont"></view>
+          <view class="title">
+            <view>楼市动态</view>
+            <view class="more_pp">
+              <navigator open-type="navigate" url="../articleList/articleList" hover-class="navigator-hover">
+            更多动态
+                <text class="iconfont moreFont1"></text>
+              </navigator>
+            </view>
+          </view>
+        </view>
+        <view class="newsList">
+          <navigator open-type="navigate" url="../articleDetail/articleDetail?rid={{item.id}}" hover-class="navigator-hover" class="item" a:for="{{notice}}">
+            <text class="cate">{{item.type_name}}</text>
+            <text class="shu">|</text>
+            <text class="desc">
+               {{item.desc}}
+            </text>
+          </navigator>
+        </view>
+      </view>
+      <view class="section_title_bar" a:if="{{louPanlist&&louPanlist.length}}">
+        <view class="iconfont collectFont"></view>
+        <view class="title">
+          <view>热门楼盘</view>
+          <view class="more_pp" onTap="toMore">更多楼盘
+            <text class="iconfont moreFont1"></text></view>
+        </view>
+      </view>
+      <!-- 楼盘列表 -->
+      <lpxmlist louPanlist="{{louPanlist}}"></lpxmlist>
+    </view>
+  </view>
+</view>

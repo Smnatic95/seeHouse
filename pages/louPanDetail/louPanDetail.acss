@@ -1,0 +1,309 @@
+.lPDetailPage {
+  background-color: white
+}
+
+.louPanDetailimg_box image {
+  width: 100vw;
+}
+
+.operating {
+  width: 100vw;
+  height: 110rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: all .2s linear
+}
+
+.path_video {
+  width: 100vw;
+}
+
+@keyframes transOut {
+  100% {
+    transform: translateY(0)
+  }
+}
+
+.operating.show {
+  transform: translateY(100%);
+  animation-name: transOut;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  animation-duration: .3s
+}
+
+.subscribe.ed {
+  color: red
+}
+
+.operating.init {
+  transform: translateY(0)!important
+}
+
+.operating.hide {
+  transform: translateY(100%)
+}
+
+.operating .btn {
+  height: 80rpx;
+  width: 30%;
+  text-align: center;
+  border-radius: 25rpx;
+  color: white
+}
+
+.operating .reservation {
+  background: linear-gradient(to right, #FBBB06, #FCAF4D);
+}
+
+.operating .advisory {
+  background: linear-gradient(to right, #FC801C, #FE6313);
+}
+
+.operating .btn .t1 {
+  padding: 6rpx 0;
+}
+
+.operating .btn .t2 {
+  font-size: 22rpx
+}
+
+.phoneCall, .more {
+  text-align: center
+}
+
+.phoneCall .iconfont, .more .iconfont {
+  font-size: 60rpx
+}
+
+.phoneCall .toa, .more .toa {
+  font-size: 24rpx;
+}
+
+.moreOperating {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  z-index: 2;
+  transition: all .2s ease-in;
+  border-top-left-radius: 15rpx;
+  border-top-right-radius: 15rpx;
+}
+
+.moreOperating .cancel {
+  text-align: center;
+  font-size: 29rpx;
+  padding: 25rpx 0
+}
+
+.moreOperating .item {
+  padding: 30rpx 0;
+  text-align: center;
+  color: #555
+}
+
+.moreOperating .item .iconfont {
+  font-size: 50rpx;
+  font-weight: 200
+}
+
+.moreOperating .item .title {
+  font-size: 22rpx;
+  margin-top: 8rpx
+}
+
+.reservationForm_box {
+  width: 100%;
+  background-color: #FE6313;
+  padding-top: 25rpx;
+  padding-bottom: 25rpx
+}
+
+.reservationForm {
+  width: 96vw;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20rpx 0 20rpx 0;
+  border-radius: 15rpx
+}
+
+.operatingLsit {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.iptItem {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 15rpx;
+  font-weight: 600!important;
+  color: #3E3E3E;
+  font-size: 30rpx;
+  min-height: 82rpx;
+}
+
+.iptItem .pull_right {
+  width: 80%;
+}
+
+.iptItem .iptToa {
+  width: 20%;
+  text-align: left;
+}
+
+.iptItem .alInput {
+  width: 100%;
+  border: none!important;
+  margin-bottom: 0!important;
+  color: black!important
+}
+
+.iptItem .pull_right .pickContent {
+  padding-left: 20rpx
+}
+
+.reservationForm button.reservationSubmit {
+  background: linear-gradient(to right, #FC801C, #FE6313);
+  color: white;
+  border-radius: 8rpx;
+  font-size: 30rpx;
+  width: 60%;
+  margin: 0 auto;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-top: 20rpx
+}
+
+.reservationForm button.getUserMobile {
+  color: #CCCCCC;
+  width: 100%;
+  background-color: white;
+  text-align: left;
+  top: 0;
+  left: 0;
+  border: none
+}
+
+.container {
+  padding-bottom: 110rpx
+}
+
+.moreOperating .item button.share {
+  padding: 0;
+  border: none;
+  height: auto
+}
+
+.moreOperating .item button.share .title {
+  height: 22rpx;
+  line-height: 22rpx
+}
+
+.getmobile_box {
+  position: fixed;
+  width: 80vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding-bottom: 50rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+  z-index: 2
+}
+
+.getmobile_box .you_img {
+  width: 100%;
+}
+
+.getmobile_box .you_img image {
+  width: 100%;
+}
+
+.getmobile_box .toa {
+  text-align: center;
+  padding: 15rpx 0 50rpx 0
+}
+
+.getmobile_box button {
+  width: 60%;
+  margin: 0 auto;
+  background-color: #57BC6E;
+  border: none;
+  border-radius: 12rpx
+}
+
+.flk {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.flk .logo_car {
+  width: 26%;
+  box-sizing: border-box;
+  padding-right: 20rpx;
+}
+
+.flk .logo_car image {
+  width: 100%
+}
+
+.activeToa {
+  text-align: left;
+  padding: 20rpx 0;
+  font-size: 30rpx
+}
+
+.price_box .price_now .iconfont {
+  color: #FE6015
+}
+
+.price_box .price_now .price {
+  color: #FE6015;
+  font-size: 50rpx;
+  font-weight: 1000
+}
+
+.hx_price {
+  display: inline-block;
+  margin-left: 20rpx;
+  background-color: #FFEAD5;
+  border-radius: 0.3rem;
+  text-decoration: line-through;
+  width: 1.4rem;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  text-align: center;
+  color: #FE6015;
+  font-size: 30rpx;
+  font-weight: 1000
+}
+
+.active_name {
+  color: #343437;
+  font-weight: 600;
+  margin-bottom: 10rpx
+}
+
+.cGray {
+  color: gray
+}
+
+.f24 {
+  font-size: 23rpx;
+}

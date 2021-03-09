@@ -1,0 +1,104 @@
+<view class='page-container-classname' ref='saveChildRef0'>
+  <demo-block title='按钮类型' padding=" " ref='saveChildRef1'>
+    <view class='row'>
+      <van-button class='demo-margin-right' ref='saveChildRef2'>
+        默认按钮
+      </van-button>
+      <van-button type='primary' class='demo-margin-right' ref='saveChildRef3'>
+        主要按钮
+      </van-button>
+      <van-button type='info' class='demo-margin-right' ref='saveChildRef4'>
+        信息按钮
+      </van-button>
+    </view>
+    <van-button type='danger' class='demo-margin-right' ref='saveChildRef5'>
+      危险按钮
+    </van-button>
+    <van-button type='warning' ref='saveChildRef6'>
+      警告按钮
+    </van-button>
+  </demo-block>
+  <demo-block title='朴素按钮' padding=" " ref='saveChildRef7'>
+    <van-button type='primary' plain=" " class='demo-margin-right' ref='saveChildRef8'>
+      朴素按钮
+    </van-button>
+    <van-button type='info' plain=" " ref='saveChildRef9'>
+      朴素按钮
+    </van-button>
+  </demo-block>
+  <demo-block title='细边框' padding=" " ref='saveChildRef10'>
+    <van-button type='primary' plain=" " hairline=" " class='demo-margin-right' ref='saveChildRef11'>
+      细边框按钮
+    </van-button>
+    <van-button type='info' plain=" " hairline=" " ref='saveChildRef12'>
+      细边框按钮
+    </van-button>
+  </demo-block>
+  <demo-block title='禁用状态' padding=" " ref='saveChildRef13'>
+    <van-button type='primary' disabled=" " class='demo-margin-right' ref='saveChildRef14'>
+      禁用状态
+    </van-button>
+    <van-button type='info' disabled=" " ref='saveChildRef15'>
+      禁用状态
+    </van-button>
+  </demo-block>
+  <demo-block title='加载状态' padding=" " ref='saveChildRef16'>
+    <van-button loading=" " type='primary' class='demo-margin-right' ref='saveChildRef17'>
+    </van-button>
+    <van-button loading=" " type='primary' loading-type='spinner' class='demo-margin-right' ref='saveChildRef18'>
+    </van-button>
+    <van-button loading=" " type='info' loading-text='加载中...' ref='saveChildRef19'>
+    </van-button>
+  </demo-block>
+  <demo-block title='按钮形状' padding=" " ref='saveChildRef20'>
+    <van-button type='primary' square=" " class='demo-margin-right' ref='saveChildRef21'>
+      方形按钮
+    </van-button>
+    <van-button type='info' round=" " ref='saveChildRef22'>
+      圆形按钮
+    </van-button>
+  </demo-block>
+  <demo-block title='图标按钮' padding=" " ref='saveChildRef23'>
+    <van-button type='primary' icon='star-o' class='demo-margin-right' ref='saveChildRef24'>
+    </van-button>
+    <van-button type='primary' icon='star-o' class='demo-margin-right' ref='saveChildRef25'>
+      按钮
+    </van-button>
+    <van-button plain=" " type='primary' icon='https://img.yzcdn.cn/vant/logo.png' ref='saveChildRef26'>
+      按钮
+    </van-button>
+  </demo-block>
+  <demo-block title='按钮尺寸' padding=" " ref='saveChildRef27'>
+    <van-button type='primary' size='large' block=" " custom-class='demo-margin-bottom' ref='saveChildRef28'>
+      大号按钮
+    </van-button>
+    <van-button type='primary' class='demo-margin-right' ref='saveChildRef29'>
+      普通按钮
+    </van-button>
+    <van-button type='primary' size='small' class='demo-margin-right' ref='saveChildRef30'>
+      小型按钮
+    </van-button>
+    <van-button type='primary' size='mini' ref='saveChildRef31'>
+      迷你按钮
+    </van-button>
+  </demo-block>
+  <demo-block title='块级元素' padding=" " ref='saveChildRef32'>
+    <van-button type='primary' custom-class='demo-margin-bottom' ref='saveChildRef33'>
+      普通按钮
+    </van-button>
+    <van-button type='primary' block=" " ref='saveChildRef34'>
+      块级元素
+    </van-button>
+  </demo-block>
+  <demo-block title='自定义颜色' padding=" " ref='saveChildRef35'>
+    <van-button color='#7232dd' class='demo-margin-right' ref='saveChildRef36'>
+      单色按钮
+    </van-button>
+    <van-button color='#7232dd' class='demo-margin-right' plain=" " ref='saveChildRef37'>
+      单色按钮
+    </van-button>
+    <van-button color='linear-gradient(to right, #4bb0ff, #6149f6)' ref='saveChildRef38'>
+      渐变色按钮
+    </van-button>
+  </demo-block>
+</view>

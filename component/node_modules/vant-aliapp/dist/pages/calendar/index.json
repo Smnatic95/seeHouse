@@ -1,0 +1,8 @@
+{
+	"defaultTitle": "Calendar 日历",
+	"usingComponents": {
+		"demo-block": "vant-aliapp/components/demo-block/index",
+		"van-cell": "vant-aliapp/dist/cell/index",
+		"van-calendar": "vant-aliapp/dist/calendar/index"
+	}
+}

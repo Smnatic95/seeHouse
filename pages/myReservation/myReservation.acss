@@ -1,0 +1,74 @@
+.reservation_list {
+  min-height: 100vh;
+  background-color: #F4F4F4;
+}
+
+.reservation_item .info {
+  padding: 0 20rpx;
+  background-color: white;
+}
+
+.reservation_item .louPanName {
+  padding: 30rpx 0;
+  font-size: 34rpx;
+  border-bottom: 1px solid #eee;
+  font-weight: 800
+}
+
+.reservation_item .address, .reservation_item .louPanPhone {
+  display: flex;
+  justify-content: space-between;
+  padding: 15rpx 0;
+  font-size: 26rpx
+}
+
+.reservation_item .address .toa, .reservation_item .louPanPhone .toa {
+  color: #666;
+  flex-shrink: 0;
+  margin-right: 30rpx
+}
+
+.reservation_item .address .detail, .reservation_item .louPanPhone .detail {
+  font-weight: 600
+}
+
+.reservation_item .operating {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20rpx 0
+}
+
+.reservation_item .operating view {
+  padding: 10rpx;
+  border: 1px solid #ccc;
+  font-size: 28rpx;
+  border-radius: 30rpx;
+  margin-right: 20rpx
+}
+
+.reservation_item .operating view .iconfont {
+  margin-right: 10rpx;
+  margin-left: 15rpx
+}
+
+.reservation_item .time {
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 27rpx;
+  padding-left: 20rpx;
+  color: #666
+}
+
+.noGW {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: gray
+}
+
+.noGW image{
+     width: 80%;
+     margin-bottom: 50rpx;
+}

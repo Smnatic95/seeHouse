@@ -1,0 +1,8 @@
+{
+	"defaultTitle": "Circle 进度条",
+	"usingComponents": {
+		"demo-block": "vant-aliapp/components/demo-block/index",
+		"van-button": "vant-aliapp/dist/button/index",
+		"van-circle": "vant-aliapp/dist/circle/index"
+	}
+}

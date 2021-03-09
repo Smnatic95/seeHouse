@@ -1,0 +1,8 @@
+{
+	"defaultTitle": "Dialog 弹出框",
+	"usingComponents": {
+		"demo-block": "vant-aliapp/components/demo-block/index",
+		"van-cell": "vant-aliapp/dist/cell/index",
+		"van-dialog": "vant-aliapp/dist/dialog/index"
+	}
+}

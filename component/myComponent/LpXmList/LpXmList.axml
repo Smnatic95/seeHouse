@@ -1,0 +1,41 @@
+<!-- 楼盘列表 -->
+<view class="louPanlist" a:if="{{louPanlist}}">
+  <view class="item" a:if="{{showYHlouPan||item.is_pay!=1}}" a:for="{{louPanlist}}" onTap="toDetail" data-id="{{item.id}}">
+    <view class="thumb">
+      <!--<view class="mask"></view> -->
+      <image lazy-load="true" src="{{item.path_img}}"></image>
+    </view>
+    <view class="title">
+					{{item.pro_name}}
+    </view>
+    <!---->
+    <view class="info">
+      <view class="location">
+						{{item.title}}
+      </view>
+      <!--置业顾问-->
+      <view data-id="{{item.m_id}}" data-name="{{item.pro_name}}" catchTap="toZhiyeList" class="zhiyes" a:if="{{item.reasion_info}}">
+        <view class="avator" a:for="{{item.reasion_info}}" a:for-item="reasion">
+          <image src="{{reasion.avater}}"></image>
+        </view>
+        <view class="more">
+          ...
+        </view>
+      </view>
+    </view>
+    <!--价格-->
+    <block a:if="{{item.is_pay==1}}">
+      <view class="price">
+        <text class="iconfont rmbFont"></text>
+        <text class="amount">{{item.amount}}</text>
+      </view>
+    </block>
+  </view>
+</view>
+<!--无楼盘时显示图片-->
+<view a:else class="noPan">
+  <image mode="widthFix" src="../../static/noPan.png"/>
+  <view>
+      {{noPanToa}}
+  </view>
+</view>

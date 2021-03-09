@@ -1,0 +1,39 @@
+<view>
+  <!--当前城市-->
+  <view class="curCity">
+    <view class="title">
+      当前城市
+    </view>
+    <view class="city">
+      <text class="iconfont locationFont"></text>
+      <text>{{curCityName}}</text>
+    </view>
+  </view>
+  <!--城市列表-->
+  <!-- <scroll-view class="all_City_list" scroll-y=true scroll-into-view="{{goCitysId}}"
+   scroll-with-animation=true scroll-animation-duration="150">
+    <view id="{{'word'+item.initials}}" a:for="{{citys}}">
+      <view class="curWord">
+         {{item.initials}}
+      </view>
+      <view class="city_item" a:for="{{item.citys}}" a:for-item="city">
+          {{city}}
+      </view>
+    </view>
+  </scroll-view> -->
+   <view class="all_City_list">
+    <view id="{{'word'+item.initials}}" a:for="{{citys}}">
+      <view class="curWord">
+         {{item.initials}}
+      </view>
+      <view class="city_item" a:for="{{item.citys}}" a:for-item="city">
+        <navigator open-type="reLaunch" url="../index/index?chsCity={{city.area_name}}" hover-class="navigator-hover">{{city.area_name}}</navigator>
+      </view>
+    </view>
+  </view>
+  <view class="showChsWord {{showChsWordClass}}">{{goCitysId}}</view>
+  <!--单词索引-->
+  <view class="word_list">
+    <view a:for="{{word_list}}" data-word="{{item}}" onTap="wordClick">{{item}}</view>
+  </view>
+</view>

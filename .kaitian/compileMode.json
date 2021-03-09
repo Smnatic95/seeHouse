@@ -1,0 +1,59 @@
+{
+  "current": null,
+  "modes": [
+    {
+      "title": "消息列表",
+      "page": "pages/message/message"
+    },
+    {
+      "title": "楼盘列表",
+      "page": "pages/LouPanList/LouPanList"
+    },
+    {
+      "title": "楼盘详情",
+      "page": "pages/louPanDetail/louPanDetail",
+      "pageQuery": "index=61"
+    },
+    {
+      "title": "个人中心",
+      "page": "pages/mine/mine"
+    },
+    {
+      "title": "消息详情",
+      "page": "pages/chatDetail/chatDetail"
+    },
+    {
+      "title": "选择城市",
+      "page": "pages/chooseCity/chooseCity"
+    },
+    {
+      "title": "获取用户信息",
+      "page": "pages/getuserdata/getuserdata"
+    },
+    {
+      "title": "我的预约",
+      "page": "pages/myReservation/myReservation"
+    },
+    {
+      "title": "订阅楼盘",
+      "page": "pages/mySubscribePan/mySubscribePan"
+    },
+    {
+      "title": "收藏的置业顾问",
+      "page": "pages/myCollectRasion/myCollectRasion"
+    },
+    {
+      "title": "文章详情",
+      "page": "pages/articleDetail/articleDetail",
+      "pageQuery": "rid=1"
+    },
+    {
+      "title": "文章列表",
+      "page": "pages/articleList/articleList"
+    },
+    {
+      "title": "优惠楼盘列表",
+      "page": "pages/YhLouPanList/YhLouPanList"
+    }
+  ]
+}

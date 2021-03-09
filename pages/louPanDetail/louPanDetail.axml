@@ -1,0 +1,127 @@
+<view class="lPDetailPage" a:if="{{init}}">
+  <!--楼盘内容区-->
+  <view class="container">
+    <!--项目视频-->
+    <video class="path_video" a:if="{{product_detail.path_video}}"src="{{product_detail.path_video}}" controls="{{video.showAllControls}}" loop="{{video.isLooping}}" muted="{{video.muteWhenPlaying}}" show-fullscreen-btn="{{video.showFullScreenButton}}" show-play-btn="{{video.showPlayButton}}" show-center-play-btn="{{video.showCenterButton}}" object-fit="{{video.objectFit}}" autoplay="{{video.autoPlay}}" direction="{{video.directionWhenFullScreen}}" initial-time="{{video.initTime}}" mobilenetHintType="{{video.mobilenetHintType}}" poster="{{product_detail.path_img}}" poster-size="fill" />
+    <!--项目图片-->
+    <view class="louPanDetailimg_box" onTouchStart="imgBoxTouchStart" onTouchEnd="imgBoxTouchEnd">
+      <block a:for="{{louPanImgList}}">
+        <image data-index="{{index}}" onTap="imgTap" mode="widthFix" src="{{item.imgs}}"/>
+      </block>
+    </view>
+    <!--表单区-->
+    <view class="reservationForm_box">
+      <form class="reservationForm" onSubmit="reservationSubmit">
+        <!--介绍-->
+        <view class="flk" a:if="{{product_detail.is_pay != 0}}">
+          <view class="logo_car">
+            <image mode="widthFix" src="{{product_detail.logo}}"/>
+          </view>
+          <view class="activeToa">
+            <view class="price_box">
+              <view class="price_now">
+                <text class="iconfont rmbFont"></text>
+                <text class="price">{{product_detail.amount}}</text>
+                <text class="hx_price">
+                  <text class="iconfont rmbFont"></text>{{product_detail.hx_amount}}</text>
+              </view>
+            </view>
+            <view class="active_name">{{product_detail.title1}}</view>
+            <view class="f24 cGray">{{product_detail.title2}}</view>
+          </view>
+        </view>
+        <!--输入框-->
+        <view class="iptItem">
+          <view class="iptToa">手机号</view>
+          <view class="pull_right" style="width:80%;display:flex;align-items:center">
+            <input a:if="{{UserMobile}}" placeholder="请输入您的手机号" value="{{UserMobile}}" name="mobile" disabled="{{true}}" class="nameIpt"/>
+            <button a:else class="getUserMobile" onGetAuthorize="onGetPhoneNumber" onError="onGetPhoneNumberError" type="primary" open-type="getAuthorize" scope="phoneNumber">请输入您的手机号</button>
+          </view>
+        </view>
+        <view class="iptItem">
+          <view class="iptToa">姓名</view>
+          <view class="pull_right" style="width:80%;display:flex;align-items:center">
+            <input placeholder="请输入您的姓名" name="real_name" class="phoneIpt"/>
+          </view>
+        </view>
+        <block a:if="{{product_detail.is_pay == 0}}">
+          <button class="reservationSubmit" size="default" formType="submit">预约看房</button>
+        </block>
+        <block a:else>
+          <button class="reservationSubmit" size="default" formType="submit" data-types="1">立即支付</button>
+        </block>
+      </form>
+    </view>
+  </view>
+  <!--底部操作区-->
+  <view class="operating {{operatingShowClass}}">
+    <view class="btn reservation" onTap="yuyue">
+      <view class="t1">
+            预约看房
+      </view>
+      <view class="t2">
+            一键直达
+      </view>
+    </view>
+    <view class="btn advisory" onTap="seek" data-index="{{product_detail.m_id}}">
+      <view class="t1">
+            在线咨询
+      </view>
+      <view class="t2">
+            联系销售顾问
+      </view>
+    </view>
+    <view class="phoneCall" onTap="callTel" data-tel="{{product_detail.tels}}">
+      <view class="iconfont phoneFont"></view>
+      <view class="toa">
+        电话
+      </view>
+    </view>
+    <view class="more" onTap="getMoreOperating">
+      <view class="iconfont moreFont"></view>
+      <view class="toa">
+        更多
+      </view>
+    </view>
+  </view>
+  <!--更多操作-->
+  <view class="moreOperating" style="transform:translateY({{moreOperatingTransY}})">
+    <view class="operatingLsit">
+      <view class="item" data-isSubs="{{is_subs}}" onTap="subScribe">
+        <view class="iconfont subscribe {{is_subs?'ed':''}}"></view>
+        <view class="title">
+          {{is_subs?'已订阅':'订阅'}}
+        </view>
+      </view>
+      <view class="item">
+        <button class="share" open-type="share">
+          <view class="iconfont shareFont"></view>
+          <view class="title">
+          分享楼盘
+          </view>
+        </button>
+      </view>
+      <view class="item" onTap="openLocation">
+        <view class="iconfont daoHang"></view>
+        <view class="title">
+            位置导航
+        </view>
+      </view>
+    </view>
+    <view class="cancel" onTap="moreOperatingCancel">
+        取消
+    </view>
+  </view>
+  <!--诱导获取手机号-->
+  <view class="getmobile_box" a:if="{{showGetMobileBox}}">
+    <view class="you_img">
+      <image mode="widthFix" src="{{product_detail.path_img}}"/>
+    </view>
+    <view class="toa">
+      {{product_detail.show_msg}}
+    </view>
+    <button size="default" onGetAuthorize="onGetPhoneNumber" onError="onGetPhoneNumberError" type="primary" open-type="getAuthorize" scope="phoneNumber">{{product_detail.btn_msg}}</button>
+  </view>
+  <getuserinfo show="{{showLogin}}" onAgreeAuth="AgreeAuth" onErrorAuth="ErrorAuth" onCancelAuth="CancelAuth"></getuserinfo>
+  <view class="mask" a:if="{{!moreOperatingTransY||showGetMobileBox}}" onTap="maskTap"></view>
+</view>

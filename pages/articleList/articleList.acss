@@ -1,0 +1,143 @@
+.noListtoa {
+  text-align: center
+}
+
+.contentSwiper {
+  height: calc(100vh - 65rpx);
+}
+
+.contentSwiper .article_list {
+  height: calc(100vh - 65rpx);
+  background-color: #F7F8FA;
+}
+
+/*文章列表*/
+
+.article_list .item {
+  border-bottom: 1px solid #eee;
+  padding: 30rpx 20rpx 35rpx 20rpx;
+}
+
+.article_list .item:first-of-type {
+  padding-top: 0
+}
+
+/* 单图 */
+
+.article_list .item.danTu {
+  display: flex;
+}
+
+.article_list .item.danTu .thumb {
+  width: 25%;
+  flex-shrink: 0
+}
+
+.article_list image {
+  width: 100%
+}
+
+.article_list .item.danTu .info {
+  flex-shrink: 0;
+  width: 75%;
+  font-size: 28rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between
+}
+
+/*大图*/
+
+.article_list .daTu .thumb {
+  width: 100%;
+}
+
+.article_list .daTu .thumb {
+  width: 100%;
+}
+
+/*三图*/
+
+.article_list .sanTu .info {
+  margin-bottom: 10rpx
+}
+
+.article_list .sanTu .thumb {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10rpx
+}
+
+.article_list .sanTu .thumb image {
+  width: 31%;
+}
+
+/*时间*/
+
+.article_list .item .time {
+  margin-top: 8rpx;
+  color: gray;
+  font-size: 22rpx
+}
+
+.article_list .item .info .desc {
+  line-height: 50rpx;
+  font-size: 28rpx;
+  font-weight: 550;
+  color: #444
+}
+
+.article_list .item .info .title {
+  font-weight: 600
+}
+
+.article_list .item .info .shu {
+  margin: 0 8rpx
+}
+
+.noMore .toa {
+  padding: 20rpx 0;
+  text-align: center;
+  font-size: 27rpx
+}
+
+.cat_list {
+  display: flex;
+  justify-content: center;
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 100vw;
+  white-space: nowrap;
+  font-size: 26rpx;
+  font-weight: bold;
+  box-shadow: 0 0.05rem 0.02rem #eee;
+  background-color: white;
+}
+
+.cat_list::-webkit-scrollbar {
+  display: none
+}
+
+.cat_list .item {
+  padding: 0 10rpx 0 10rpx;
+  flex-shrink: 0;
+  transition: all ease-in-out .2s
+}
+
+.cat_list .item.active {
+  color: #DD4634;
+  position: relative;
+  font-size: 38rpx
+}
+
+/* .cat_list .item.active::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 30rpx;
+  height: 4rpx;
+  background-color: #C9151E;
+  transform: translateX(-50%)
+} */

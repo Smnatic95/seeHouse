@@ -1,0 +1,108 @@
+.louPanlist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between
+}
+
+.louPanlist .item {
+  width: 47%;
+  padding-bottom: 35rpx;
+}
+
+.louPanlist .item .thumb {
+  width: 100%;
+  /* position: relative */
+}
+
+.louPanlist .item .thumb .mask {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+  opacity: .3;
+}
+
+.louPanlist .item .thumb image {
+  width: 100%;
+  height: 350rpx
+}
+
+.louPanlist .item .title {
+  font-size: 28rpx;
+  padding: 15rpx 0 0 10rpx
+}
+
+.price {
+  padding: 0 0 0 10rpx;
+  font-size: 36rpx;
+  color: #C10001;
+  font-weight: bold
+}
+
+.louPanlist .item .info {
+  width: 100%;
+  padding-left: 10rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60rpx
+}
+
+.louPanlist .item .info .location {
+  font-size: 24rpx;
+  color: gray
+}
+
+.louPanlist .item .zhiyes {
+  display: flex;
+  align-items: center
+}
+
+.louPanlist .item .zhiyes .more {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  color: #6582B9;
+  font-size: 35rpx;
+  text-align: center;
+  line-height: 25rpx;
+  margin-left: -16rpx;
+  background-color: white;
+}
+
+.louPanlist .item .zhiyes .avator {
+  margin-left: -16rpx;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  overflow: hidden
+}
+
+.louPanlist .item .zhiyes .avator image {
+  width: 100%;
+  height: 100%;
+}
+
+.hx_amount{
+  font-size: 20rpx;
+  text-decoration: line-through;
+  margin-left: 15rpx
+}
+
+.noPan {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #444;
+  font-size: 28rpx;
+}
+
+.noPan image {
+  width: 60%;
+}

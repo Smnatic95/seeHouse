@@ -1,0 +1,8 @@
+{
+	"defaultTitle": "Skeleton 骨架屏",
+	"usingComponents": {
+		"demo-block": "vant-aliapp/components/demo-block/index",
+		"van-switch": "vant-aliapp/dist/switch/index",
+		"van-skeleton": "vant-aliapp/dist/skeleton/index"
+	}
+}

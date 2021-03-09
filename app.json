@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/message/message",
+    "pages/mine/mine",
+    "pages/LouPanList/LouPanList",
+    "pages/louPanDetail/louPanDetail",
+    "pages/zheYeList/zheYeList",
+    "pages/chatDetail/chatDetail",
+    "pages/chooseCity/chooseCity",
+    "pages/myReservation/myReservation",
+    "pages/mySubscribePan/mySubscribePan",
+    "pages/myCollectRasion/myCollectRasion",
+    "pages/articleDetail/articleDetail",
+    "pages/articleList/articleList",
+    "pages/YhLouPanList/YhLouPanList"
+  ],
+  "window": {
+    "defaultTitle": "小宝看房"
+  },
+  "tabBar": {
+    "textColor": "black",
+    "selectedColor": "#C10005",
+    "backgroundColor": "#ffffff",
+    "items": [
+      {
+        "pagePath": "pages/index/index",
+        "name": "首页",
+        "icon": "static/tabBar/index.png",
+        "activeIcon": "static/tabBar/indexSel.png"
+      },
+      {
+        "pagePath": "pages/YhLouPanList/YhLouPanList",
+        "name": "特惠",
+        "icon": "static/tabBar/Discount.png",
+        "activeIcon": "static/tabBar/DiscountSelected.png"
+      },
+      {
+        "pagePath": "pages/articleList/articleList",
+        "name": "资讯",
+        "icon": "static/tabBar/ziXun.png",
+        "activeIcon": "static/tabBar/ziXunSel.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "name": "我的",
+        "icon": "static/tabBar/mine.png",
+        "activeIcon": "static/tabBar/mineSel.png"
+      }
+    ]
+  }
+}

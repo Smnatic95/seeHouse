@@ -1,0 +1,30 @@
+<view class='page-container-classname' ref='saveChildRef0'>
+  <demo-block card=" " title='提示弹窗' padding=" " ref='saveChildRef1'>
+    <van-cell title='提示弹窗' is-link=" " onClick='onClickAlert' ref='saveChildRef2'>
+    </van-cell>
+    <van-cell title='提示弹窗（无标题）' is-link=" " onClick='onClickAlert2' ref='saveChildRef3'>
+    </van-cell>
+    <van-cell title='确认弹窗' is-link=" " onClick='onClickConfirm' ref='saveChildRef4'>
+    </van-cell>
+  </demo-block>
+  <demo-block card=" " title='圆角按钮样式' padding=" " ref='saveChildRef5'>
+    <van-cell title='提示弹窗' is-link=" " onClick='onClickThemeAlert' ref='saveChildRef6'>
+    </van-cell>
+    <van-cell title='提示弹窗（无标题）' is-link=" " onClick='onClickThemeAlert2' ref='saveChildRef7'>
+    </van-cell>
+  </demo-block>
+  <demo-block card=" " title='异步关闭' padding=" " ref='saveChildRef8'>
+    <van-cell title='异步关闭' onClick='onClickAsyncClose' ref='saveChildRef9'>
+    </van-cell>
+  </demo-block>
+  <demo-block card=" " title='组件调用' padding=" " ref='saveChildRef10'>
+    <van-cell title='组件调用' onClick='showCustomDialog' ref='saveChildRef11'>
+    </van-cell>
+  </demo-block>
+  <van-dialog use-slot=" " title='标题' show='{{ show }}' show-cancel-button=" " confirm-button-open-type='getUserInfo' onClose='onClose' onGetuserinfo='getUserInfo' ref='saveChildRef12'>
+    <image class='demo-image' src='https://img.yzcdn.cn/public_files/2017/09/05/4e3ea0898b1c2c416eec8c11c5360833.jpg'>
+    </image>
+  </van-dialog>
+  <van-dialog id='van-dialog' ref='saveChildRef13'>
+  </van-dialog>
+</view>

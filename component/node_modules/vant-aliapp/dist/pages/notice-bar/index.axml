@@ -1,0 +1,26 @@
+<view class='page-container-classname' ref='saveChildRef0'>
+  <demo-block title='基础用法' ref='saveChildRef1'>
+    <van-notice-bar text='{{ text }}' left-icon='volume-o' ref='saveChildRef2'>
+    </van-notice-bar>
+  </demo-block>
+  <demo-block title='滚动模式' ref='saveChildRef3'>
+    <van-notice-bar scrollable=" " text='{{ shortText }}' custom-class='demo-margin-bottom' ref='saveChildRef4'>
+    </van-notice-bar>
+    <van-notice-bar scrollable='{{ false }}' text='{{ text }}' custom-class='demo-margin-bottom' ref='saveChildRef5'>
+    </van-notice-bar>
+  </demo-block>
+  <demo-block title='多行展示' ref='saveChildRef6'>
+    <van-notice-bar wrapable=" " scrollable='{{ false }}' text='{{ text }}' ref='saveChildRef7'>
+    </van-notice-bar>
+  </demo-block>
+  <demo-block title='通知栏模式' ref='saveChildRef8'>
+    <van-notice-bar mode='closeable' text='{{ shortText }}' ref='saveChildRef9'>
+    </van-notice-bar>
+    <van-notice-bar custom-class='margin-top' mode='link' text='{{ shortText }}' ref='saveChildRef10'>
+    </van-notice-bar>
+  </demo-block>
+  <demo-block title='自定义样式' ref='saveChildRef11'>
+    <van-notice-bar text='{{ shortText }}' color='#1989fa' background='#ecf9ff' left-icon='info-o' ref='saveChildRef12'>
+    </van-notice-bar>
+  </demo-block>
+</view>

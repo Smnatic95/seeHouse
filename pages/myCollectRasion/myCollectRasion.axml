@@ -1,0 +1,41 @@
+<view>
+  <view class="zhiYeList" a:if="{{reasionList}}">
+    <view class="zhiYeItem" a:for="{{reasionList}}">
+      <view class="top">
+        <view class="info">
+          <view class="avator">
+            <image mode="scaleToFill" src="{{item.avater}}"/>
+          </view>
+          <view class="intro">
+            <view class="name">
+                {{item.u_name}}
+            </view>
+            <view class="position">
+                楼盘: {{item.pro_name}}
+            </view>
+          </view>
+        </view>
+        <view class="addWechat" onTap="copyBtn" data-wx="{{item.wx}}">
+          <view class="iconfont weChatFont"></view>
+          <view class="toa">添加微信</view>
+        </view>
+      </view>
+      <view class="bottom_funcs">
+        <!--<view class="func" onTap="collect" data-id="{{item.id}}" data-isCol="{{item.is_col}}"><view class="iconfont collectFont {{item.is_col?'collectEd':''}}"></view><view class="title">
+              {{item.is_col?'已收藏':'收藏顾问'}}</view></view><view class="func"><view class="iconfont onlineAskFont"></view><view class="title">
+               在线咨询</view></view> -->
+        <view class="func" onTap="makePhoneCall" data-tel="{{item.mobile}}">
+          <view class="iconfont phoneFont"></view>
+          <view class="title">
+               电话咨询
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="noGW"  a:else>
+    <image mode="scaleToFill" src="../../static/noContent.png"/>
+     您还没有收藏顾问...
+  </view>
+  <getuserinfo show="{{showLogin}}" onAgreeAuth="AgreeAuth" onErrorAuth="ErrorAuth" onCancelAuth="CancelAuth"></getuserinfo>
+</view>

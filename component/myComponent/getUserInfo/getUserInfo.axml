@@ -1,0 +1,24 @@
+<view a:if="{{show}}">
+  <view class="getUserInfoBox">
+    <view class="title">
+  获取头像和昵称
+    </view>
+    <view class="descreption">
+      <view>
+     为了更好的为您提供服务
+      </view>
+      <view>
+    申请获取用户信息
+      </view>
+    </view>
+    <view class="operation">
+      <view class="cancel" onTap="cancel">
+     取消
+      </view>
+      <button type="primary" open-type="getAuthorize" onGetAuthorize="onGetAuthorize" onError="onAuthError" scope="userInfo">
+    允许授权
+      </button>
+    </view>
+  </view>
+  <view class="mask"></view>
+</view>

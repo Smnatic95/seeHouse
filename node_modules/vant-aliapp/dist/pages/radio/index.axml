@@ -1,0 +1,88 @@
+<view class='page-container-classname' ref='saveChildRef0'>
+  <demo-block title='基本用法' padding=" " ref='saveChildRef1'>
+    <van-radio-group value='{{ radio1 }}' data-key='radio1' onChange='onChange' ref='saveChildRef2'>
+      <van-radio name='1' custom-class='demo-radio' ref='saveChildRef3'>
+        单选框 1
+      </van-radio>
+      <van-radio name='2' ref='saveChildRef4'>
+        单选框 2
+      </van-radio>
+    </van-radio-group>
+  </demo-block>
+  <demo-block title='禁用状态' padding=" " ref='saveChildRef5'>
+    <van-radio-group disabled=" " value='{{ radio2 }}' data-key='radio2' onChange='onChange' ref='saveChildRef6'>
+      <van-radio name='1' custom-class='demo-radio' ref='saveChildRef7'>
+        单选框 1
+      </van-radio>
+      <van-radio name='2' ref='saveChildRef8'>
+        单选框 2
+      </van-radio>
+    </van-radio-group>
+  </demo-block>
+  <demo-block title='自定义形状' padding=" " ref='saveChildRef9'>
+    <van-radio-group value='{{ radioShape }}' data-key='radioShape' onChange='onChange' ref='saveChildRef10'>
+      <van-radio name='1' shape='square' custom-class='demo-radio' ref='saveChildRef11'>
+        单选框
+      </van-radio>
+      <van-radio name='2' shape='square' ref='saveChildRef12'>
+        单选框
+      </van-radio>
+    </van-radio-group>
+  </demo-block>
+  <demo-block title='自定义颜色' padding=" " ref='saveChildRef13'>
+    <van-radio-group value='{{ radio3 }}' data-key='radio3' onChange='onChange' ref='saveChildRef14'>
+      <van-radio name='1' custom-class='demo-radio' checked-color='#07c160' ref='saveChildRef15'>
+        单选框
+      </van-radio>
+      <van-radio name='2' checked-color='#07c160' ref='saveChildRef16'>
+        单选框
+      </van-radio>
+    </van-radio-group>
+  </demo-block>
+  <demo-block title='自定义大小' padding=" " ref='saveChildRef17'>
+    <van-radio-group value='{{ radioSize }}' data-key='radioSize' onChange='onChange' ref='saveChildRef18'>
+      <van-radio name='1' icon-size='24px' custom-class='demo-radio' ref='saveChildRef19'>
+        单选框
+      </van-radio>
+      <van-radio name='2' icon-size='24px' ref='saveChildRef20'>
+        单选框
+      </van-radio>
+    </van-radio-group>
+  </demo-block>
+  <demo-block title='自定义图标' padding=" " ref='saveChildRef21'>
+    <van-radio-group value='{{ radio4 }}' data-key='radio4' onChange='onChange' ref='saveChildRef22'>
+      <van-radio use-icon-slot=" " name='1' ref='saveChildRef23'>
+        自定义图标        <image slot='icon' src="{{ radio4 === '1' ? icon.active : icon.normal }}" class='icon' mode='widthFix'>
+        </image>
+      </van-radio>
+      <van-radio use-icon-slot=" " name='2' ref='saveChildRef24'>
+        自定义图标        <image slot='icon' src="{{ radio4 === '2' ? icon.active : icon.normal }}" class='icon' mode='widthFix'>
+        </image>
+      </van-radio>
+    </van-radio-group>
+  </demo-block>
+  <demo-block title='禁用文本点击' padding=" " ref='saveChildRef25'>
+    <van-radio-group value='{{ radioLabel }}' data-key='radioLabel' onChange='onChange' ref='saveChildRef26'>
+      <van-radio label-disabled=" " name='1' custom-class='demo-radio' ref='saveChildRef27'>
+        单选框 1
+      </van-radio>
+      <van-radio label-disabled=" " name='2' ref='saveChildRef28'>
+        单选框 2
+      </van-radio>
+    </van-radio-group>
+  </demo-block>
+  <demo-block title='与 Cell 组件一起使用' ref='saveChildRef29'>
+    <van-radio-group value='{{ radio5 }}' ref='saveChildRef30'>
+      <van-cell-group ref='saveChildRef31'>
+        <van-cell title='单选框 1' clickable=" " data-name='1' onClick='onClick' ref='saveChildRef32'>
+          <van-radio slot='right-icon' name='1' ref='saveChildRef33'>
+          </van-radio>
+        </van-cell>
+        <van-cell title='单选框 2' clickable=" " data-name='2' onClick='onClick' ref='saveChildRef34'>
+          <van-radio slot='right-icon' name='2' ref='saveChildRef35'>
+          </van-radio>
+        </van-cell>
+      </van-cell-group>
+    </van-radio-group>
+  </demo-block>
+</view>

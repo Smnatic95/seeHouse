@@ -1,0 +1,6 @@
+ <view class="mainCnt">
+    <!-- 楼盘列表 -->
+    <view class="louPanlist_box">
+      <lpxmlist louPanlist="{{louPanlist}}" noPanToa="您还没有订阅任何房源....."></lpxmlist>
+    </view>
+  </view>

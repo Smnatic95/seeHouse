@@ -1,0 +1,32 @@
+<view class="page">
+  <view class="searchNav_box">
+    <view class="searchNav">
+      <view class="chooseLocation" onTap="chooseCity">
+        <view class="choosedLocation">{{chsedCity_name}}</view>
+        <view class="iconfont downFont {{citysBoxTrsY?'':'up'}}"></view>
+      </view>
+      <view class="shu"></view>
+      <view class="searchCnt">
+        <view class="iconfont searchFont" onTap="searchPro"></view>
+        <input class="serachIpt" focus="{{isFocus}}" value="{{serachIpt}}" onConfirm="searchPro" onInput="onSerachIpt" placeholder="请输入楼盘名称" placeholder-class="searchPlaceholder" />
+      </view>
+    </view>
+  </view>
+  <view class="Citys_box" style="transform:translateY({{citysBoxTrsY}})">
+    <view class="city_list">
+      <view class="iconfont item {{'全部'==chsedCity_name?'active':''}}" data-areaName="全部" data-areaId="" onTap="chooseArea">
+             全部
+      </view>
+      <view class="iconfont item {{item.title==chsedCity_name?'active':''}}" a:for="{{area}}" data-areaName="{{item.title}}" data-areaId="{{item.id}}" onTap="chooseArea">
+             {{item.title}}
+      </view>
+    </view>
+  </view>
+  <view class="mask" a:if="{{!citysBoxTrsY}}" onTap="chooseCity"></view>
+  <view class="mainCnt">
+    <!-- 楼盘列表 -->
+    <view class="louPanlist_box">
+      <lpxmlist showYHlouPan="true" louPanlist="{{louPanlist}}"></lpxmlist>
+    </view>
+  </view>
+</view>

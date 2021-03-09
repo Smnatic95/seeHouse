@@ -1,0 +1,68 @@
+<view>
+  <!--消息列表-->
+  <view class="message_list">
+    <view class="item">
+      <view class="avator">
+        <image mode="scaleToFill" src="https://www.hs-estate.com/uploads/2020/06/image-2.png"/>
+      </view>
+      <view class="pull_right">
+        <view class="person_info">
+          <view class="name">
+          公孙丽
+          </view>
+          <view class="role">
+            镜像西湖
+          </view>
+        </view>
+        <view class="chat_info">
+          你好,请问这个房子.......
+        </view>
+      </view>
+    </view>
+    <view class="item">
+      <view class="avator">
+        <image mode="scaleToFill" src="https://www.hs-estate.com/uploads/2020/06/image-2.png"/>
+      </view>
+      <view class="pull_right">
+        <view class="person_info">
+          <view class="name">
+          公孙丽
+          </view>
+          <view class="role">
+            镜像西湖
+          </view>
+        </view>
+        <view class="chat_info">
+          你好,请问这个房子.......
+        </view>
+      </view>
+    </view>
+    <view class="item">
+      <view class="avator">
+        <image mode="scaleToFill" src="https://www.hs-estate.com/uploads/2020/06/image-2.png"/>
+      </view>
+      <view class="pull_right">
+        <view class="person_info">
+          <view class="name">
+          公孙丽
+          </view>
+          <view class="role">
+            镜像西湖
+          </view>
+        </view>
+        <view class="chat_info">
+          你好,请问这个房子.......
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--暂无消息通知-->
+  <view class="noMessage_box" a:if="{{false}}">
+    <view class="img">
+      <image mode="widthFix" src="../../static/noMessage.png"/>
+    </view>
+    <view class="toa">
+          暂无消息通知.....
+    </view>
+  </view>
+</view>

@@ -1,0 +1,2 @@
+<demo-home list='{{ list }}' ref='saveChildRef1'>
+</demo-home>

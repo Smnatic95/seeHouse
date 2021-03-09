@@ -1,0 +1,123 @@
+.page {
+  min-height: 100vh;
+  background-color: white
+}
+
+.searchNav_box {
+  height: 100rpx;
+  box-shadow: 0 5rpx 2rpx #eee;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: white;
+  width: 100vw;
+  padding-top: 5rpx
+}
+
+.mainCnt {
+  padding-top: 100rpx
+}
+
+.searchNav {
+  width: 95vw;
+  height: 80rpx;
+  box-shadow: 1rpx 1rpx 10rpx gray;
+  border-radius: 20rpx;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.searchNav .chooseLocation {
+  width: 26%;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.searchNav .downFont {
+  font-size: 16rpx;
+  margin-left: 6rpx;
+  transition: all .15s;
+  margin-top: 6rpx
+}
+
+.searchNav .chooseLocation .downFont.up {
+  transform: rotate(180deg);
+  margin-top: 0
+}
+
+.searchNav .shu {
+  width: 2px;
+  height: 40rpx;
+  background-color: gray;
+  margin-right: 30rpx
+}
+
+.searchCnt {
+  display: flex;
+  align-items: center;
+}
+
+.searchCnt .searchFont {
+  font-size: 40rpx;
+  margin-right: 20rpx
+}
+
+.serachIpt {
+  width: 100%;
+  height: 100%;
+  background-color: white
+}
+
+.searchPlaceholder {
+  color: gray
+}
+
+.louPanlist_box {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.Citys_box {
+  width: 100vw;
+  margin: 0 auto;
+  position: fixed;
+  z-index: 1;
+  top: 103rpx;
+  left: 0;
+  background-color: white;
+  overflow: hidden;
+  transition: all .15s linear;
+}
+
+.Citys_box .city_list {
+  padding: 0 15rpx
+}
+
+.Citys_box .city_list .item {
+  padding: 15rpx;
+  font-size: 28rpx;
+  height: 30rpx;
+}
+
+.Citys_box .city_list .item.active {
+  color: #C10005;
+  position: relative
+}
+
+.Citys_box .city_list .item.active::before {
+  content: '\e709';
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  color: #C10005;
+  font-size: 42rpx
+}
+
+.searchNav .choosedLocation {
+  font-size: 26rpx
+}

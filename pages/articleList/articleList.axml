@@ -1,0 +1,81 @@
+<view class="page" a:if="{{init}}">
+  <!--分类-->
+  <scroll-view class="cat_list" scroll-x="{{true}}">
+    <view class="item {{index==curInd?'active':''}}" a:for="{{types}}" data-index="{{index}}" data-id="{{item.id}}" onTap="catItemClick">
+      {{item.type_name}}
+    </view>
+  </scroll-view>
+  <!--内容区-->
+  <swiper class="contentSwiper" current="{{curInd}}" disable-programmatic-animation="{{true}}" onChange="swiperChange" circular="{{false}}">
+    <swiper-item a:for="{{types}}" key="swiper-item-{{index}}">
+      <!--文章列表-->
+      <scroll-view class="article_list" onScrollToLower="onScrollToLower" scroll-y="{{true}}" a:if="{{types[index].noticeList.length}}">
+        <navigator a:for="{{types[index].noticeList}}" open-type="navigate" url="../articleDetail/articleDetail?rid={{item.id}}">
+          <!--单图展示-->
+          <view class="item danTu" a:if="{{item.temp==1}}">
+            <view class="info">
+              <!--标题-->
+              <view class="desc">
+                {{item.desc}}
+              </view>
+              <!--时间-->
+              <view class="time">
+                {{item.createtime}}
+              </view>
+            </view>
+            <!--图片-->
+            <view class="thumb">
+              <image lazy-load="{{true}}" mode="widthFix" src="{{item.img}}"/>
+            </view>
+          </view>
+          <!--大图展示-->
+          <view class="item daTu" a:elif="{{item.temp==3}}">
+            <view class="info">
+              <!--标题-->
+              <view class="desc">
+                {{item.desc}}
+              </view>
+            </view>
+            <!--图片-->
+            <view class="thumb">
+              <image lazy-load="{{true}}" mode="widthFix" src="{{item.img}}"/>
+            </view>
+            <!--时间-->
+            <view class="time">
+                {{item.createtime}}
+            </view>
+          </view>
+          <!--三图展示-->
+          <view class="item sanTu" a:else>
+            <view class="info">
+              <!--标题-->
+              <view class="desc">
+                {{item.desc}}
+              </view>
+            </view>
+            <!--图片-->
+            <view class="thumb">
+              <image a:for="{{item.imgs}}" a:for-item="imgSrc" lazy-load="{{true}}" mode="widthFix" src="{{imgSrc}}"/>
+            </view>
+            <!--时间-->
+            <view class="time">
+                {{item.createtime}}
+            </view>
+          </view>
+        </navigator>
+        <!--无更多内容-->
+        <view class="noMore" a:if="{{!item.hasNext}}">
+          <view class="toa">
+          暂无更多内容....
+          </view>
+        </view>
+      </scroll-view>
+      <!--分类内容为空时-->
+      <view class="noListtoa" a:elif="{{item.page!=0}}">
+        <view class="toa">
+          暂无内容
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>

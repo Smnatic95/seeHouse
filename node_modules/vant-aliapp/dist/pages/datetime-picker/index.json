@@ -1,0 +1,8 @@
+{
+	"defaultTitle": "DatetimePicker 时间选择",
+	"usingComponents": {
+		"demo-block": "vant-aliapp/components/demo-block/index",
+		"van-toast": "vant-aliapp/dist/toast/index",
+		"van-datetime-picker": "vant-aliapp/dist/datetime-picker/index"
+	}
+}

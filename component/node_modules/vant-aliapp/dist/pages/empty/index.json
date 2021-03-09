@@ -1,0 +1,10 @@
+{
+	"defaultTitle": "Empty 空状态",
+	"usingComponents": {
+		"demo-block": "vant-aliapp/components/demo-block/index",
+		"van-button": "vant-aliapp/dist/button/index",
+		"van-empty": "vant-aliapp/dist/empty/index",
+		"van-tab": "vant-aliapp/dist/tab/index",
+		"van-tabs": "vant-aliapp/dist/tabs/index"
+	}
+}

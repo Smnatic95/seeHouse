@@ -1,0 +1,31 @@
+<view class="mine_box">
+  <view class="p_info_panel">
+    <view class="avator">
+      <image mode="scaleToFill" src="{{u.avatar?u.avatar:'../../static/defaultAvator.png'}}"/>
+    </view>
+    <view class="name" onTap="checkLogin">
+         {{u.nickname?u.nickname:'点击登录'}}
+    </view>
+  </view>
+  <view class="quickmenu">
+    <view class="menu" data-url="../myCollectRasion/myCollectRasion" onTap="mineNavigate">
+        <view class="iconfont collectFont"></view>
+        <view class="title">
+             收藏的顾问
+        </view>
+    </view>
+    <view class="menu" data-url="../mySubscribePan/mySubscribePan" onTap="mineNavigate">
+      <view class="iconfont louPanFont"></view>
+      <view class="title">
+             订阅的楼盘
+      </view>
+    </view>
+    <view class="menu" data-url="../myReservation/myReservation" onTap="mineNavigate">
+      <view class="iconfont yuyueFont"></view>
+      <view class="title">
+             我的预约
+      </view>
+    </view>
+  </view>
+</view>
+<getuserinfo show="{{showLogin}}" onAgreeAuth="AgreeAuth" onErrorAuth="ErrorAuth" onCancelAuth="CancelAuth"></getuserinfo>

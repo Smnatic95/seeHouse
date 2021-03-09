@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+     "lpxmlist":"../../component/myComponent/LpXmList/LpXmList"
+  }
+}

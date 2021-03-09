@@ -1,0 +1,40 @@
+<view class='page-container-classname' ref='saveChildRef0'>
+  <van-cell center=" " title='基础用法' ref='saveChildRef1'>
+    <van-stepper value='{{ 1 }}' ref='saveChildRef2'>
+    </van-stepper>
+  </van-cell>
+  <van-cell center=" " title='步长设置' ref='saveChildRef3'>
+    <van-stepper value='{{ 1 }}' step='2' ref='saveChildRef4'>
+    </van-stepper>
+  </van-cell>
+  <van-cell center=" " title='限制输入范围' ref='saveChildRef5'>
+    <van-stepper value='{{ 1 }}' min='5' max='8' ref='saveChildRef6'>
+    </van-stepper>
+  </van-cell>
+  <van-cell center=" " title='限制输入整数' ref='saveChildRef7'>
+    <van-stepper value='{{ 1 }}' integer=" " ref='saveChildRef8'>
+    </van-stepper>
+  </van-cell>
+  <van-cell center=" " title='禁用状态' ref='saveChildRef9'>
+    <van-stepper value='{{ 1 }}' disabled=" " ref='saveChildRef10'>
+    </van-stepper>
+  </van-cell>
+  <van-cell center=" " title='禁用长按' ref='saveChildRef11'>
+    <van-stepper value='{{ 1 }}' long-press='{{ false }}' ref='saveChildRef12'>
+    </van-stepper>
+  </van-cell>
+  <van-cell center=" " title='固定小数位数' ref='saveChildRef13'>
+    <van-stepper value='{{ 1 }}' step='0.2' decimal-length='{{ 1 }}' ref='saveChildRef14'>
+    </van-stepper>
+  </van-cell>
+  <van-cell center=" " title='异步变更' ref='saveChildRef15'>
+    <van-stepper value='{{ value }}' async-change=" " onChange='onChange' ref='saveChildRef16'>
+    </van-stepper>
+  </van-cell>
+  <van-cell center=" " title='自定义大小' ref='saveChildRef17'>
+    <van-stepper value='{{ 1 }}' input-width='40px' button-size='32px' ref='saveChildRef18'>
+    </van-stepper>
+  </van-cell>
+  <van-toast id='van-toast' ref='saveChildRef19'>
+  </van-toast>
+</view>

@@ -1,0 +1,179 @@
+/* required by usingComponents */
+
+.indexPage {
+  background-color: #FFF;
+}
+
+.xmSwiper {
+  height: 420rpx!important
+}
+
+.xmSwiper swiper-item image {
+  width: 100%;
+  height: 380rpx;
+  transform: scale(.96);
+  transition: all .3s ease;
+  border-radius: 16rpx;
+}
+
+.xmSwiper .cur image {
+  transform: scale(1);
+  transition: all .3s ease;
+}
+
+.section_title_bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16rpx
+}
+
+.section_title_bar>.iconfont {
+  color: #C10005;
+  font-size: 40rpx
+}
+
+.section_title_bar .title {
+  width: 90%;
+  margin-left: 15rpx;
+  font-size: 34rpx;
+  font-weight: bold;
+  font-family: '微软雅黑';
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+
+.more_pp {
+  font-size: 28rpx;
+  font-weight: normal;
+  color: #747474
+}
+
+.newsList {
+  font-size: 26rpx;
+  margin: 15rpx 0;
+  margin: 0 auto;
+  padding-bottom: 15rpx
+}
+
+.newsList .item {
+  display: flex;
+  padding-bottom: 12rpx;
+}
+
+.newsList .item text {
+  flex-shrink: 0
+}
+
+.newsList .item .cate {
+  width: 15%;
+  text-align: center;
+  font-weight: bold
+}
+
+.newsList .item .shu {
+  width: 3%;
+  text-align: center;
+  color: gray
+}
+
+.newsList .item .desc {
+  width: 82%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+    flex-shrink: 0
+}
+
+.mainCnt {
+  width: 96vw;
+  margin: 0 auto
+}
+
+.container {
+  padding-top: 95rpx
+}
+
+.myNav {
+  font-size: 26rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  padding: 15rpx 15rpx 8rpx 15rpx;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  z-index: 999;
+  transform: translateX(-50%);
+  background-color: white;
+  box-shadow: 0 0.05rem 0.02rem #eee;
+}
+
+.myNav .lbs {
+  width: 20%;
+  color: #C10005;
+}
+
+.myNav .lbs .locationFont {
+  font-size: 30rpx;
+  margin-right: 8rpx;
+}
+
+.myNav .lbs .cityName {
+  font-size: 28rpx;
+}
+
+.myNav .lPSearch_box {
+  background-color: #fff;
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+  height: 65rpx;
+  width: 80%;
+  overflow: hidden;
+  box-shadow: 1rpx 1rpx 10rpx gray
+}
+
+.myNav .lPSearch_box text {
+  width: 7%;
+  margin-left: 24rpx;
+  color: gray
+}
+
+.myNav .lPSearch_box .ipt {
+  background-color: #ffff;
+  font-size: 28rpx;
+  width: 93%;
+  height: 100%
+}
+
+.myNav .placeholder {
+  color: #ccc;
+  text-align: center
+}
+
+.mySlides {
+  width: 100vw;
+  height: 350rpx;
+  display: flex;
+  white-space: nowrap
+}
+
+/* .mySlides::-webkit-scrollbar{
+  display: none
+} */
+
+.mySlides .slide {
+  width: 90%;
+  height: 350rpx;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center
+}
+
+.mySlides .slide image {
+  width: 95%;
+  height: 100%
+}

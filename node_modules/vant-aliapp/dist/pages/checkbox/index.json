@@ -1,0 +1,10 @@
+{
+	"defaultTitle": "Checkbox 复选框",
+	"usingComponents": {
+		"demo-block": "vant-aliapp/components/demo-block/index",
+		"van-cell": "vant-aliapp/dist/cell/index",
+		"van-cell-group": "vant-aliapp/dist/cell-group/index",
+		"van-checkbox": "vant-aliapp/dist/checkbox/index",
+		"van-checkbox-group": "vant-aliapp/dist/checkbox-group/index"
+	}
+}

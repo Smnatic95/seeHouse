@@ -1,0 +1,22 @@
+<view class='page-container-classname' ref='saveChildRef0'>
+  <demo-block title='基础用法' ref='saveChildRef1'>
+    <van-progress custom-class='progress-position' percentage='0' ref='saveChildRef2'>
+    </van-progress>
+  </demo-block>
+  <demo-block title='线条粗细' ref='saveChildRef3'>
+    <van-progress custom-class='progress-position' stroke-width='8' percentage='100' ref='saveChildRef4'>
+    </van-progress>
+  </demo-block>
+  <demo-block title='置灰' ref='saveChildRef5'>
+    <van-progress custom-class='progress-position' inactive=" " percentage='50' ref='saveChildRef6'>
+    </van-progress>
+  </demo-block>
+  <demo-block title='样式定制' ref='saveChildRef7'>
+    <van-progress custom-class='progress-position' pivot-text='橙色' color='#f2826a' percentage='25' ref='saveChildRef8'>
+    </van-progress>
+    <van-progress custom-class='progress-position' pivot-text='红色' color='#ee0a24' percentage='50' ref='saveChildRef9'>
+    </van-progress>
+    <van-progress custom-class='progress-position' percentage='75' pivot-text='紫色' pivot-color='#7232dd' color='linear-gradient(to right, #be99ff, #7232dd)' ref='saveChildRef10'>
+    </van-progress>
+  </demo-block>
+</view>

@@ -1,0 +1,65 @@
+.getUserInfoBox {
+  position: fixed;
+  width: 65vw;
+  padding: 30rpx 0 0 0;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  border-radius: 13rpx;
+  overflow: hidden;
+  color: #333;
+}
+
+.getUserInfoBox .title {
+  text-align: center;
+  padding: 15rpx 0;
+  border-bottom: 1px dashed #ccc
+}
+
+.getUserInfoBox button {
+  width: 70%;
+  margin: 0 auto;
+  font-size: 30rpx
+}
+
+.getUserInfoBox .descreption {
+  text-align: center;
+  padding: 30rpx 0;
+  font-size: 26rpx
+}
+
+.getUserInfoBox .operation {
+  border-top: 1px solid #eee;
+  display: flex;
+  height: 90rpx
+}
+
+.getUserInfoBox .operation .cancel, .getUserInfoBox .operation button {
+  width: 50%;
+  height: 90rpx
+}
+
+.getUserInfoBox .operation .cancel {
+  background-color: white;
+  color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.getUserInfoBox .descreption view:first-of-type {
+  padding-bottom: 15rpx
+}
+
+.mask {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: .5;
+  z-index: 1
+}

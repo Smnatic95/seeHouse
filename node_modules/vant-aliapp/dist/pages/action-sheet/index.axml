@@ -1,0 +1,47 @@
+<view class='page-container-classname' ref='saveChildRef0'>
+  <demo-block title='基础用法' padding=" " ref='saveChildRef1'>
+    <van-button type='primary' onClick='toggleActionSheet1' ref='saveChildRef2'>
+      弹出菜单
+    </van-button>
+    <van-action-sheet show='{{ show1 }}' actions='{{ action1 }}' onClose='toggleActionSheet1' ref='saveChildRef3'>
+    </van-action-sheet>
+  </demo-block>
+  <demo-block title='选项状态' padding=" " ref='saveChildRef4'>
+    <van-button type='primary' onClick='toggleActionSheet2' ref='saveChildRef5'>
+      弹出菜单
+    </van-button>
+    <van-action-sheet show='{{ show2 }}' actions='{{ action2 }}' onClose='toggleActionSheet2' ref='saveChildRef6'>
+    </van-action-sheet>
+  </demo-block>
+  <demo-block title='展示取消按钮' padding=" " ref='saveChildRef7'>
+    <van-button type='primary' onClick='toggleActionSheet3' ref='saveChildRef8'>
+      弹出菜单
+    </van-button>
+    <van-action-sheet show='{{ show3 }}' actions='{{ action1 }}' cancel-text='取消' onClose='toggleActionSheet3' ref='saveChildRef9'>
+    </van-action-sheet>
+  </demo-block>
+  <demo-block title='展示描述信息' padding=" " ref='saveChildRef10'>
+    <van-button type='primary' onClick='toggleActionSheet4' ref='saveChildRef11'>
+      弹出菜单
+    </van-button>
+    <van-action-sheet show='{{ show4 }}' actions='{{ action1 }}' description='这是一段描述信息' onClose='toggleActionSheet4' ref='saveChildRef12'>
+    </van-action-sheet>
+  </demo-block>
+  <demo-block title='展示标题栏' padding=" " ref='saveChildRef13'>
+    <van-button type='primary' onClick='toggleActionSheet5' ref='saveChildRef14'>
+      弹出菜单
+    </van-button>
+    <van-action-sheet show='{{ show5 }}' title='标题' onClose='toggleActionSheet5' ref='saveChildRef15'>
+      <view class='content'>
+        内容
+      </view>
+    </van-action-sheet>
+  </demo-block>
+  <demo-block title='微信开放能力' padding=" " ref='saveChildRef16'>
+    <van-button type='primary' onClick='toggleActionSheet6' ref='saveChildRef17'>
+      弹出菜单
+    </van-button>
+    <van-action-sheet show='{{ show6 }}' title='标题' actions='{{ action6 }}' onClose='toggleActionSheet6' onGetuserinfo='onGetUserInfo' ref='saveChildRef18'>
+    </van-action-sheet>
+  </demo-block>
+</view>

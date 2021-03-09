@@ -1,0 +1,114 @@
+.zhiYeList {
+  padding-top: 11rpx;
+  width: 100vw;
+  background-color: #F5F5F5
+}
+
+.zhiYeItem {
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 15rpx;
+  border-radius: 15rpx;
+  margin-bottom: 30rpx;
+  margin-top: 20rpx;
+  height: 230rpx;
+}
+
+.zhiYeItem .top {
+  width: 94%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 15rpx;
+  border-bottom: 1px solid #F3F3F3;
+  height: 65%
+}
+
+.zhiYeItem .top .info {
+  display: flex;
+}
+
+.zhiYeItem .top .info .avator {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  overflow: hidden
+}
+
+.zhiYeItem .top .info .avator image {
+  width: 100%;
+  height: 100%;
+}
+
+.zhiYeItem .top .info .intro {
+  padding-left: 18rpx;
+  padding-top: 10rpx;
+  font-family: "微软雅黑"
+}
+
+.zhiYeItem .top .info .intro .name {
+  font-weight: 600
+}
+
+.zhiYeItem .top .info .intro .position {
+  font-size: 26rpx;
+  margin-top: 16rpx
+}
+
+.zhiYeItem .top .addWechat {
+  display: flex;
+  align-items: center;
+  color: #FE6313
+}
+
+.zhiYeItem .top .addWechat .iconfont {
+  font-size: 35rpx;
+  margin-right: 8rpx;
+}
+
+.zhiYeItem .top .addWechat .toa {
+  font-size: 29rpx;
+  font-family: "微软雅黑";
+}
+
+.zhiYeItem .bottom_funcs {
+  width: 94%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 15rpx
+}
+
+.zhiYeItem .bottom_funcs .func {
+  display: flex;
+  align-items: center
+}
+
+.collectFont.collectEd {
+  color: red
+}
+
+.zhiYeItem .bottom_funcs .func .iconfont {
+  font-size: 40rpx
+}
+
+.zhiYeItem .bottom_funcs .func .title {
+  font-size: 24rpx;
+  padding-left: 12rpx;
+  font-family: '微软雅黑'
+}
+
+.noGW {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: gray
+}
+
+.noGW image {
+  width: 80%;
+  margin-bottom: 50rpx;
+}

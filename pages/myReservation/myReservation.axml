@@ -1,0 +1,45 @@
+<view class="page" a:if="{{init}}">
+  <view class="noGW" a:if="{{!reserveList.length}}">
+    <image mode="scaleToFill" src="../../static/noContent.png"/>
+     您还没有任何预约...
+  </view>
+  <view class="reservation_list">
+    <view class="reservation_item" a:for="{{reserveList}}">
+      <view class="time">
+   {{item.addtime}}
+      </view>
+      <view class="info">
+        <view class="louPanName">
+        {{item.pro_name}}
+        </view>
+        <view class="address">
+          <view class="toa">
+          楼盘地址
+          </view>
+          <view class="detail">
+          {{item.address}}
+          </view>
+        </view>
+        <view class="louPanPhone">
+          <view class="toa">
+          楼盘电话
+          </view>
+          <view class="detail">
+         {{item.tels}}
+          </view>
+        </view>
+        <view class="operating">
+          <!--<view class="online_reasion"><text class="iconfont onlineAskFont"></text> 在线咨询</view> -->
+          <view class="online_reasion" data-status="{{item.status}}"data-id="{{item.id}}" onTap="cancelRes">
+            <text class="iconfont onlineAskFont"></text> 
+          {{item.status==0?'已取消':'取消预约'}}
+          </view>
+          <view class="contact" data-tel="{{item.tels}}" onTap="makePhoneCall">
+            <text class="iconfont phoneFont"></text> 联系楼盘
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<getuserinfo show="{{showLogin}}" onAgreeAuth="AgreeAuth" onErrorAuth="ErrorAuth" onCancelAuth="CancelAuth"></getuserinfo>
