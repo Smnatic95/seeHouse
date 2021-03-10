@@ -48,40 +48,6 @@ Page({
       }
     });
   },
-  //打开地图
-  openLocation() {
-    let product = this.data.product_detail;
-    my.openLocation({
-      longitude: product.lat,
-      latitude: product.lng,
-      name: product.pro_name,
-      address: product.address,
-    })
-  },
-  getUserId() {
-    return new Promise((resolve, reject) => {
-      my.getAuthCode({
-        scopes: 'auth_base',
-        success: (result) => {
-          my.request({
-            url: url + 'SwiperApi/saveUserInfo',
-            method: 'get',
-            data: { authCode: result.authCode },
-            dataType: 'json',
-            success: (result) => {
-              resolve(result.data.data.id)
-            }
-          });
-        },
-        fail: () => {
-
-        },
-        complete: () => {
-
-        }
-      });
-    })
-  },
   //获取楼盘详情
   getDetail(p, uid) {
     my.showLoading();
@@ -92,18 +58,21 @@ Page({
       data: { id: p, uid },
       dataType: 'json',
       success: (result) => {
-        my.hideLoading()
-        console.log('楼盘详情数据', result.data.data)
+        my.hideLoading();
+        let lpData = result.data.data;
+        console.log('楼盘详情数据', lpData)
         my.setNavigationBar({
-          title: result.data.data.product.pro_name
+          title: lpData.product.pro_name
         });
         _this.setData({
-          louPanImgList: result.data.data.pro_imgs,
-          product_detail: result.data.data.product,
-          is_subs: result.data.data.is_subs,
+          louPanImgList: lpData.pro_imgs,
+          product_detail: lpData.product,
+          is_subs: lpData.is_subs,
           init: true,
-          showGetMobileBox: !Boolean(result.data.data.product.user_mobile),
-          UserMobile: result.data.data.product.user_mobile
+          showGetMobileBox: !Boolean(lpData.product.user_mobile),
+          UserMobile: lpData.product.user_mobile,
+          is_rev: lpData.is_rev,
+          yy_user_num: lpData.product.yy_user_num
         })
       }, fail(err) {
         my.showToast({
@@ -144,22 +113,28 @@ Page({
       }
     })
   },
-  //预约
+  //点击预约
   yuyue() {
-    let _this = this;
-    my.getStorage({
-      key: 'uid',
-      complete(res) {
-        if (res.data) {
-          _this.makeReserve({
-            uid: res.data,
-            pro_id: _this.data.pid,
-            mobile: _this.data.mobile,
-            type: _this.data.product_detail.is_pay
-          });
+    if (this.data.UserMobile) {
+      let _this = this;
+      my.getStorage({
+        key: 'uid',
+        complete(res) {
+          if (res.data) {
+            _this.makeReserve({
+              uid: res.data,
+              pro_id: _this.data.pid,
+              mobile: _this.data.UserMobile,
+              type: _this.data.product_detail.is_pay
+            });
+          }
         }
-      }
-    });
+      });
+    }else{
+      this.setData({
+        showGetMobileBox:true
+      })
+    }
     // my.pageScrollTo({
     //   selector: '.reservationForm',
     //   duration: 150
@@ -188,6 +163,40 @@ Page({
     my.navigateTo({
       url: '/pages/zheYeList/zheYeList?rid=' + rid + '&panName=' + this.data.product_detail.pro_name
     });
+  },
+  //打开地图
+  openLocation() {
+    let product = this.data.product_detail;
+    my.openLocation({
+      longitude: product.lat,
+      latitude: product.lng,
+      name: product.pro_name,
+      address: product.address,
+    })
+  },
+  getUserId() {
+    return new Promise((resolve, reject) => {
+      my.getAuthCode({
+        scopes: 'auth_base',
+        success: (result) => {
+          my.request({
+            url: url + 'SwiperApi/saveUserInfo',
+            method: 'get',
+            data: { authCode: result.authCode },
+            dataType: 'json',
+            success: (result) => {
+              resolve(result.data.data.id)
+            }
+          });
+        },
+        fail: () => {
+
+        },
+        complete: () => {
+
+        }
+      });
+    })
   },
   imgBoxTouchStart(e) {
     // this.setData({
@@ -323,6 +332,7 @@ Page({
     })
   },
   makeReserve(parames) {
+    let _this = this;
     my.request({
       url: url + 'SwiperApi/makeReserve',
       method: 'get',
@@ -342,11 +352,13 @@ Page({
         else if (parames.is_pay == 1) {
           this.pay(result.data.data.trade_no);
         } else {
-          my.showToast({
-            type: 'success',
-            content: result.data.msg,
-            duration: 1500,
-          });
+          my.alert({
+            title: '预约成功',
+            content: '感谢您的信任,我们将尽快为您服务'
+          })
+          _this.setData({
+            is_rev: 1
+          })
         }
       },
       fail(err) {

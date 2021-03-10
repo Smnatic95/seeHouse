@@ -55,12 +55,20 @@
   </view>
   <!--底部操作区-->
   <view class="operating {{operatingShowClass}}">
-    <view class="btn reservation" onTap="yuyue">
+    <view class="btn reservation" onTap="yuyue" a:if="{{!is_rev}}">
       <view class="t1">
             预约看房
       </view>
       <view class="t2">
-            一键直达
+          {{yy_user_num}}人已预约
+      </view>
+    </view>
+    <view class="btn reservation" a:else>
+      <view class="t1">
+            已预约
+      </view>
+      <view class="t2">
+           {{yy_user_num}}人已预约
       </view>
     </view>
     <view class="btn advisory" onTap="seek" data-index="{{product_detail.m_id}}">
