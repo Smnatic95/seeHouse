@@ -264,12 +264,14 @@ Page({
   },
   //保存用户手机号
   saveUserTel(mobile, uid) {
+    let pid = this.data.pid;
     my.request({
       url: url + 'SwiperApi/saveUserTel',
       method: 'get',
       data: {
         mobile,
-        uid
+        uid,
+        pid
       },
       dataType: 'json',
       success: (result) => {
